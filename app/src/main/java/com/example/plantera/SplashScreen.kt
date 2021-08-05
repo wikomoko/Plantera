@@ -15,8 +15,15 @@ class SplashScreen : AppCompatActivity() {
 
         //handler for auto move to another activity using second delay time
         Handler().postDelayed({
+            //move activity
            val intent= Intent(this,IntroActivity::class.java)
            startActivity(intent)
+
+            //finish activity
+            finish()
+
         },2000)
+
+
     }
 }
