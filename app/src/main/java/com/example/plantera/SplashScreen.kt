@@ -10,6 +10,9 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
+        //hidding action bar
+        supportActionBar?.hide()
+
         //handler for auto move to another activity using second delay time
         Handler().postDelayed({
            val intent= Intent(this,IntroActivity::class.java)
