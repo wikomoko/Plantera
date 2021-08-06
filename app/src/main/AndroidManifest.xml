@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Plantera">
         <activity
             android:name=".AboutUsActivity"
-            android:exported="true" />
+            android:exported="true"
+            />
         <activity
             android:name=".IntroActivity"
             android:screenOrientation="portrait" />
