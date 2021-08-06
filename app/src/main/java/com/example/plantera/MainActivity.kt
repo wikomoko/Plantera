@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.plantera.data_sources.ProductData
+import com.example.plantera.recycler_adapter.CardViewAdapter
 
 class MainActivity : AppCompatActivity() {
 

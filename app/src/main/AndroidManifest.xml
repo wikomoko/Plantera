@@ -10,13 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Plantera">
         <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".AboutUsActivity"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".IntroActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Plantera.Custom"/>
+            android:theme="@style/Theme.Plantera.Custom" />
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait">
@@ -26,7 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:theme="@style/Theme.Plantera.Custom">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Plantera.Custom">
         </activity>
     </application>
 

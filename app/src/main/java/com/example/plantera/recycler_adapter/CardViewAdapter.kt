@@ -1,13 +1,13 @@
-package com.example.plantera
+package com.example.plantera.recycler_adapter
 
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.plantera.R
 
 class CardViewAdapter(val image_data: IntArray, val title_data: Array<String>, val desc_data: Array<String>) : RecyclerView.Adapter<CardViewAdapter.CardViewHolder>(){
     class CardViewHolder(item: View): RecyclerView.ViewHolder(item) {

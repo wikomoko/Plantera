@@ -1,4 +1,6 @@
-package com.example.plantera
+package com.example.plantera.data_sources
+
+import com.example.plantera.R
 
 class ProductData {
 
