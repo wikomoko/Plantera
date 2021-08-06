@@ -8,6 +8,10 @@ class AboutUsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return true
     }
 }

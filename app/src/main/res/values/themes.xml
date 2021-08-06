@@ -14,4 +14,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.Plantera.Custom" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yellow_plantera</item>
+        <item name="colorPrimaryVariant">@color/green_plantera</item>
+    </style>
+
 </resources>

@@ -1,7 +1,9 @@
 package com.example.plantera
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,5 +34,14 @@ class MainActivity : AppCompatActivity() {
 
         //inserting data to adapter
         rv_product.adapter = CardViewAdapter(image_data,title_data,desc_data)
+
+        //find button help
+        val btn_help=findViewById<Button>(R.id.btn_help)
+
+        //set action on btn_help
+        btn_help.setOnClickListener {
+            val intent = Intent(this,AboutUsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
