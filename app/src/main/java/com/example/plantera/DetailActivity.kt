@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -29,11 +30,25 @@ class DetailActivity : AppCompatActivity() {
         val image_detail = findViewById<ImageView>(R.id.detail_image)
         val title_detail = findViewById<TextView>(R.id.detail_title)
         val desc_detail = findViewById<TextView>(R.id.detail_desc)
+        val btn_share = findViewById<Button>(R.id.btn_share)
 
         //inserting data to components
         image_detail.setImageResource(image_reciever)
         title_detail.text = title_reciever.toString()
         desc_detail.text  = dec_reciever.toString()
+
+        //sharing data
+        btn_share.setOnClickListener {
+            val sendIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Hey, i have bought several $dec_reciever")
+                type = "text/plain"
+            }
+            startActivity(sendIntent)
+        }
+
+
+
     }
 
 
