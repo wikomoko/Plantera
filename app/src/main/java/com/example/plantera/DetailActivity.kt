@@ -1,7 +1,11 @@
 package com.example.plantera
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -32,8 +36,35 @@ class DetailActivity : AppCompatActivity() {
         desc_detail.text  = dec_reciever.toString()
     }
 
+
+    //function for responding virtual back button
     override fun onSupportNavigateUp(): Boolean {
+
+        //back to last page
         onBackPressed()
         return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.btn_menu_about -> {
+                val intent = Intent(this,AboutUsActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.btn_menu_exit -> {
+                finishAffinity()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
