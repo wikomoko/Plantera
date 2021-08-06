@@ -13,6 +13,7 @@
         tools:context=".MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_help"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
@@ -29,7 +30,8 @@
                 android:elevation="3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -37,10 +39,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Helo,"
+                android:text="@string/helo"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintEnd_toStartOf="@+id/btn_help"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,13 +51,26 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fredoka_one"
-                android:text="It is time to Gardening "
+                android:text="@string/it_is_time_to_gardening"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintEnd_toStartOf="@+id/btn_help"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            tools:listitem="@layout/product_list" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 
