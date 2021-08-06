@@ -1,5 +1,6 @@
 package com.example.plantera.recycler_adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.plantera.DetailActivity
 import com.example.plantera.R
 
 class CardViewAdapter(val image_data: IntArray, val title_data: Array<String>, val desc_data: Array<String>) : RecyclerView.Adapter<CardViewAdapter.CardViewHolder>(){
@@ -32,7 +34,14 @@ class CardViewAdapter(val image_data: IntArray, val title_data: Array<String>, v
         holder.desc.text = desc_data[position]
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context,"You pressed ${title_data[position]}",Toast.LENGTH_SHORT).show()
+           val intentWithData = Intent(holder.itemView.context,DetailActivity::class.java)
+               .putExtra("images_packet",image_data[position])
+               .putExtra("name_packet",title_data[position])
+               .putExtra("desc_packet",desc_data[position])
+
+            //sending and move to DetailActivity.kt
+            holder.itemView.context.startActivity(intentWithData)
+
         }
     }
 
