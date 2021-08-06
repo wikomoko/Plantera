@@ -11,6 +11,7 @@
       android:id="@+id/detail_image"
       android:layout_width="0dp"
       android:layout_height="240dp"
+      android:contentDescription="@string/product_image"
       android:scaleType="centerCrop"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
@@ -36,9 +37,9 @@
   <Button
       android:id="@+id/btn_share"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_height="50dp"
       android:layout_marginEnd="16dp"
-      android:text="Share"
+      android:text="@string/share"
       app:icon="@drawable/ic_share"
       app:layout_constraintBottom_toBottomOf="@+id/detail_title"
       app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +80,8 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Paprica is a spice made from dried and ground red peppers.It is traditionally made from Capsicum annuum varietals in the Longum group, which also includes chili peppers, but the peppers used for paprika tend to be milder and have thinner flesh.In many languages, but not English, the word paprika also refers to the plant and the fruit from which the spice is made, as well as to peppers in the Grossum group (e.g. bell peppers). Paprica is a spice made from dried and ground red peppers.It is traditionally made from Capsicum annuum varietals in the Longum group, which also includes chili peppers, but the peppers used for paprika tend to be milder and have thinner flesh.In many languages, but not English, the word paprika also refers to the plant and the fruit from which the spice is made, as well as to peppers in the Grossum group (e.g. bell peppers).    "
-          android:textColor="@color/black" />
+          android:textColor="@color/black"
+          android:textSize="16sp" />
     </LinearLayout>
   </ScrollView>
 
